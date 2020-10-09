@@ -11,7 +11,8 @@ import UIKit
 extension UILabel {
 
 	func addCharacterSpacing(spacing: Double = -0.2) {
-    if let labelText = text, labelText.count > 0 {
+    if let labelText = text,
+			!labelText.isEmpty {
       let attributedString = NSMutableAttributedString(string: labelText)
 
 			attributedString.addAttribute(

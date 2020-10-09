@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         		= "YDB2WError"
-  spec.version					= "1.0.1"
+  spec.version					= "1.0.2"
   spec.summary      		= "Error component for B2W."
   spec.homepage     		= "https://www.yourdev.com.br"
   spec.license      		= "MIT"

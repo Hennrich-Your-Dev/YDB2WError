@@ -24,6 +24,8 @@ public class YDB2WErrorView: UIView {
 
 	private func instanceFromNib() {
 		contentView = loadNib()
+		addSubview(contentView)
+
 		contentView.translatesAutoresizingMaskIntoConstraints = false
 
 		let top = contentView.topAnchor.constraint(equalTo: self.topAnchor)
