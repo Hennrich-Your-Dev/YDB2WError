@@ -15,6 +15,7 @@
 		C1307106252F499500880E37 /* YDB2WErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1307105252F499500880E37 /* YDB2WErrorView.swift */; };
 		C130710A252F4DB000880E37 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1307109252F4DB000880E37 /* UILabelExtension.swift */; };
 		C1A995B825308E1000A805F8 /* YDB2WErrorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A995B725308E1000A805F8 /* YDB2WErrorDelegate.swift */; };
+		C1A995BA2530958100A805F8 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A995B92530958100A805F8 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		C1307105252F499500880E37 /* YDB2WErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDB2WErrorView.swift; sourceTree = "<group>"; };
 		C1307109252F4DB000880E37 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		C1A995B725308E1000A805F8 /* YDB2WErrorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDB2WErrorDelegate.swift; sourceTree = "<group>"; };
+		C1A995B92530958100A805F8 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		D5DA0067413A6A84E1B74232 /* Pods-YDB2WError.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YDB2WError.debug.xcconfig"; path = "Target Support Files/Pods-YDB2WError/Pods-YDB2WError.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,9 +85,9 @@
 		C13070F4252F447600880E37 /* YDB2WError */ = {
 			isa = PBXGroup;
 			children = (
-				C1A995B625308E0800A805F8 /* ViewModel */,
 				C1307107252F4D8A00880E37 /* Extensions */,
-				C1307104252F496B00880E37 /* Controller */,
+				C1A995B625308E0800A805F8 /* ViewModel */,
+				C1307104252F496B00880E37 /* ViewController */,
 				C1307101252F490300880E37 /* View */,
 				C13070F5252F447600880E37 /* YDB2WError.h */,
 				C13070F6252F447600880E37 /* Info.plist */,
@@ -102,12 +104,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C1307104252F496B00880E37 /* Controller */ = {
+		C1307104252F496B00880E37 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				C1307105252F499500880E37 /* YDB2WErrorView.swift */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		C1307107252F4D8A00880E37 /* Extensions */ = {
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				C1307109252F4DB000880E37 /* UILabelExtension.swift */,
+				C1A995B92530958100A805F8 /* UIViewExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				C130710A252F4DB000880E37 /* UILabelExtension.swift in Sources */,
 				C1307106252F499500880E37 /* YDB2WErrorView.swift in Sources */,
+				C1A995BA2530958100A805F8 /* UIViewExtension.swift in Sources */,
 				C1A995B825308E1000A805F8 /* YDB2WErrorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

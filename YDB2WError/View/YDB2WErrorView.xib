@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YDB2WErrorView" customModule="YDB2WError" customModuleProvider="target">
             <connections>
                 <outlet property="actionButton" destination="704-7j-L1h" id="puf-Ib-qQM"/>
+                <outlet property="contentView" destination="2t3-Je-ydA" id="jwi-nU-B9I"/>
                 <outlet property="descriptionLabel" destination="8qZ-h7-XDH" id="oc7-u4-OJB"/>
                 <outlet property="onAction" destination="704-7j-L1h" id="yGY-NU-fLw"/>
                 <outlet property="titleLabel" destination="vGp-UY-1aA" id="En7-x0-c4s"/>
@@ -20,58 +21,70 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="alM-cD-cBO">
-                    <rect key="frame" x="149" y="255.5" width="116" height="116"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2t3-Je-ydA">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="alM-cD-cBO">
+                            <rect key="frame" x="149" y="210.5" width="116" height="116"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="116" id="fJ0-f2-32h"/>
+                                <constraint firstAttribute="height" constant="116" id="pqG-v6-lgz"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falha na conexão!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGp-UY-1aA">
+                            <rect key="frame" x="57" y="346.5" width="300" height="29"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qZ-h7-XDH">
+                            <rect key="frame" x="56" y="383.5" width="302" height="57.5"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Não foi possível carregas as informações. Verifique sua conexão com a internet e tente novamente">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="system" size="16"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="704-7j-L1h">
+                            <rect key="frame" x="57" y="482" width="300" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="dhX-Bp-Qph"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="tintColor" red="0.9882352941176471" green="0.050980392156862744" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="tentar novamente"/>
+                            <connections>
+                                <action selector="onAction:" destination="-1" eventType="touchUpInside" id="poI-SA-bz1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92156862745098034" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="116" id="fJ0-f2-32h"/>
-                        <constraint firstAttribute="height" constant="116" id="pqG-v6-lgz"/>
+                        <constraint firstAttribute="trailing" secondItem="8qZ-h7-XDH" secondAttribute="trailing" constant="56" id="7ZW-qg-ivS"/>
+                        <constraint firstItem="704-7j-L1h" firstAttribute="top" secondItem="8qZ-h7-XDH" secondAttribute="bottom" constant="41" id="BIa-TQ-wVu"/>
+                        <constraint firstItem="704-7j-L1h" firstAttribute="leading" secondItem="2t3-Je-ydA" secondAttribute="leading" constant="57" id="Di7-k4-7Ho"/>
+                        <constraint firstItem="alM-cD-cBO" firstAttribute="centerY" secondItem="2t3-Je-ydA" secondAttribute="centerY" multiplier="0.7" constant="-45.024999999999991" id="ITA-r2-lqi"/>
+                        <constraint firstItem="alM-cD-cBO" firstAttribute="centerX" secondItem="2t3-Je-ydA" secondAttribute="centerX" id="M26-QL-szY"/>
+                        <constraint firstAttribute="trailing" secondItem="vGp-UY-1aA" secondAttribute="trailing" constant="57" id="PWa-b6-jTg"/>
+                        <constraint firstAttribute="trailing" secondItem="704-7j-L1h" secondAttribute="trailing" constant="57" id="U1a-UC-NVC"/>
+                        <constraint firstItem="vGp-UY-1aA" firstAttribute="leading" secondItem="2t3-Je-ydA" secondAttribute="leading" constant="57" id="Z7T-5J-siT"/>
+                        <constraint firstItem="vGp-UY-1aA" firstAttribute="top" secondItem="alM-cD-cBO" secondAttribute="bottom" constant="20" id="ZEn-7m-OYH"/>
+                        <constraint firstItem="8qZ-h7-XDH" firstAttribute="leading" secondItem="2t3-Je-ydA" secondAttribute="leading" constant="56" id="sAd-RD-MOj"/>
+                        <constraint firstItem="8qZ-h7-XDH" firstAttribute="top" secondItem="vGp-UY-1aA" secondAttribute="bottom" constant="8" id="yYZ-tt-UbX"/>
                     </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falha na conexão!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGp-UY-1aA">
-                    <rect key="frame" x="57" y="391.5" width="300" height="29"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qZ-h7-XDH">
-                    <rect key="frame" x="57" y="428.5" width="300" height="57.5"/>
-                    <attributedString key="attributedText">
-                        <fragment content="Não foi possível carregas as informações. Verifique sua conexão com a internet e tente novamente">
-                            <attributes>
-                                <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <font key="NSFont" metaFont="system" size="16"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="704-7j-L1h">
-                    <rect key="frame" x="57" y="527" width="300" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="dhX-Bp-Qph"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <color key="tintColor" red="0.9882352941176471" green="0.050980392156862744" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="tentar novamente"/>
-                    <connections>
-                        <action selector="onAction:" destination="-1" eventType="touchUpInside" id="poI-SA-bz1"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.92156862745098034" green="0.92941176470588238" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="alM-cD-cBO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5EW-Nr-YcN"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vGp-UY-1aA" secondAttribute="trailing" constant="57" id="E1x-br-0Pg"/>
-                <constraint firstItem="alM-cD-cBO" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.7" id="Few-fx-EpC"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="704-7j-L1h" secondAttribute="trailing" constant="57" id="Mfy-FL-Ob2"/>
-                <constraint firstItem="8qZ-h7-XDH" firstAttribute="top" secondItem="vGp-UY-1aA" secondAttribute="bottom" constant="8" id="Myw-a1-Axj"/>
-                <constraint firstItem="vGp-UY-1aA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="57" id="RyO-04-dyE"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8qZ-h7-XDH" secondAttribute="trailing" constant="57" id="X4N-YA-iUQ"/>
-                <constraint firstItem="704-7j-L1h" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="57" id="Z5Q-sh-Exq"/>
-                <constraint firstItem="704-7j-L1h" firstAttribute="top" secondItem="8qZ-h7-XDH" secondAttribute="bottom" constant="41" id="ekr-GT-u0k"/>
-                <constraint firstItem="8qZ-h7-XDH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="57" id="oYH-Vh-KbA"/>
-                <constraint firstItem="vGp-UY-1aA" firstAttribute="top" secondItem="alM-cD-cBO" secondAttribute="bottom" constant="20" id="q6J-Xb-UfI"/>
+                <constraint firstItem="2t3-Je-ydA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1Lc-B2-g9c"/>
+                <constraint firstAttribute="bottom" secondItem="2t3-Je-ydA" secondAttribute="bottom" id="5QB-ol-ct6"/>
+                <constraint firstItem="2t3-Je-ydA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kjD-7A-yYp"/>
+                <constraint firstItem="2t3-Je-ydA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vMl-0h-7ZG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
