@@ -9,10 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YDB2WErrorView" customModule="YDB2WError" customModuleProvider="target">
             <connections>
-                <outlet property="actionButton" destination="704-7j-L1h" id="puf-Ib-qQM"/>
+                <outlet property="actionButton" destination="704-7j-L1h" id="ApV-bf-GTL"/>
                 <outlet property="contentView" destination="2t3-Je-ydA" id="jwi-nU-B9I"/>
                 <outlet property="descriptionLabel" destination="8qZ-h7-XDH" id="oc7-u4-OJB"/>
-                <outlet property="onAction" destination="704-7j-L1h" id="yGY-NU-fLw"/>
                 <outlet property="titleLabel" destination="vGp-UY-1aA" id="En7-x0-c4s"/>
             </connections>
         </placeholder>
@@ -59,7 +58,7 @@
                             <color key="tintColor" red="0.9882352941176471" green="0.050980392156862744" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="tentar novamente"/>
                             <connections>
-                                <action selector="onAction:" destination="-1" eventType="touchUpInside" id="poI-SA-bz1"/>
+                                <action selector="onAction:" destination="-1" eventType="touchUpInside" id="VAs-jK-3Bm"/>
                             </connections>
                         </button>
                     </subviews>

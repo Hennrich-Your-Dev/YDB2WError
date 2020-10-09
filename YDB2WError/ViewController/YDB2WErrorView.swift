@@ -13,9 +13,6 @@ public class YDB2WErrorView: UIView {
 	// MARK: Properties
 	public weak var delegate: YDB2WErrorDelegate?
 
-	// MARK: IBOutlets
-	@IBOutlet var contentView: UIView!
-
 	// MARK: Init
 	public required init?(coder: NSCoder) {
 		super.init(coder: coder)
@@ -37,6 +34,8 @@ public class YDB2WErrorView: UIView {
 	}
 
 	// MARK: IBOutlets
+	@IBOutlet var contentView: UIView!
+
 	@IBOutlet var titleLabel: UILabel! {
 		didSet {
 			titleLabel.addCharacterSpacing()
