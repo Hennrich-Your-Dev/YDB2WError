@@ -14,6 +14,11 @@ public class YDB2WErrorView: UIView {
 	public weak var delegate: YDB2WErrorDelegate?
 
 	// MARK: Init
+	public override init(frame: CGRect) {
+		super.init(frame: frame)
+		instanceFromNib()
+	}
+
 	public required init?(coder: NSCoder) {
 		super.init(coder: coder)
 		instanceFromNib()
